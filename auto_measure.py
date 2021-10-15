@@ -4,6 +4,7 @@ import pyvisa
 rm = pyvisa.ResourceManager()
 power = rm.open_resource('GPIB0::0::INSTR') #電源
 analyzer = rm.open_resource('GPIB0::1::INSTR') #スペクトラムアナライザ
+#上記のGPIBのアドレスを変更してください
 
 #電源の電圧を計測
 max_volt = power.query('MEAS:VOLT?')
